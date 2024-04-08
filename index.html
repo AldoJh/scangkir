@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kirim Pesan WhatsApp</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+}
+
+form {
+  margin-top: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input[type="number"] {
+  width: 50px;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.error {
+  color: red;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Scangkir Order Menu </h2>
+
+  <form id="whatsappForm">
+    <label for="nama">Nama lengkap:</label><br>
+    <input type="text" id="nama" name="nama"><br>
+    <span id="namaError" class="error"></span><br>
+    <label for="pesan">Menu : </label><br>
+    <input type="checkbox" id="pesan1" name="pesan" value="Kopi Hitam, Rp 10.000" onchange="toggleQuantity('jumlah1', this)">Kopi Hitam Rp 10.000
+    <input type="number" id="jumlah1" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan2" name="pesan" value="Kopi Susu, Rp 12.000" onchange="toggleQuantity('jumlah2', this)">Kopi Susu Rp 12.000
+    <input type="number" id="jumlah2" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan3" name="pesan" value="Kopi Coklat, Rp 15.000" onchange="toggleQuantity('jumlah3', this)">Kopi Coklat Rp 15.000
+    <input type="number" id="jumlah3" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan4" name="pesan" value="Kopi Susu Coklat, Rp 17.000" onchange="toggleQuantity('jumlah4', this)">Kopi Susu Coklat Rp 17.000
+    <input type="number" id="jumlah4" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan5" name="pesan" value="Kopi Susu Vanila Rp 20.000" onchange="toggleQuantity('jumlah5', this)">Kopi Susu Vanila Rp 20.000
+    <input type="number" id="jumlah5" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <button type="button" onclick="validateAndSendMessage()">Kirim Pesan</button>
+  </form>
+</div>
+
+<script>
+function toggleQuantity(jumlahId, checkbox) {
+  var quantityInput = document.getElementById(jumlahId);
+  quantityInput.style.display = checkbox.checked ? "inline-block" : "none";
+}
+
+function validateAndSendMessage() {
+  var nama = document.getElementById("nama").value.trim();
+  var namaError = document.getElementById("namaError");
+  
+  if (nama === "") {
+    namaError.textContent = "Nama harus diisi";
+    return;
+  } else {
+    namaError.textContent = "";
+  }
+
+  var checkedItems = document.querySelectorAll('input[name="pesan"]:checked');
+  var message = "Halo saya " + nama + " pesanan:\n";
+  
+  checkedItems.forEach(function(item) {
+    if (item.checked) {
+      var jumlahInput = item.nextElementSibling;
+      if (jumlahInput.style.display === "inline-block") {
+        var jumlah = jumlahInput.value;
+        message += " " + item.value + " " + jumlah + "\n";
+      } else {
+        message += " " + item.value + "\n";
+      }
+    }
+  });
+  
+  message = message.slice(0, -1); // Menghapus koma terakhir
+  message += ". \nTerima kasih.";
+  
+  var url = "https://api.whatsapp.com/send?phone=6281374517354&text=" + encodeURIComponent(message);
+  
+  window.open(url, '_blank');
+}
+</script>
+
+</body>
+</html>
