@@ -3,11 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kirim Pesan WhatsApp</title>
+<title>Scangkir Kopi</title>
 <style>
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* background-color: #F8F1E9; Warna krem */
+  background-image: url(bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
   margin: 0;
   padding: 0;
 }
@@ -15,7 +18,7 @@ body {
 .container {
   max-width: 600px;
   margin: 20px auto;
-  background-color: #fff;
+  background-color: #FFFFFF; /* Warna putih */
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -23,6 +26,7 @@ body {
 
 h2 {
   text-align: center;
+  color: #3E2723; /* Warna coklat gelap */
 }
 
 form {
@@ -31,6 +35,7 @@ form {
 
 label {
   font-weight: bold;
+  color: #3E2723; /* Warna coklat gelap */
 }
 
 input[type="text"],
@@ -39,7 +44,7 @@ button {
   padding: 10px;
   margin-top: 5px;
   margin-bottom: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #CCC;
   border-radius: 5px;
   box-sizing: border-box;
 }
@@ -49,7 +54,7 @@ input[type="number"] {
   padding: 5px;
   margin-top: 5px;
   margin-bottom: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #CCC;
   border-radius: 5px;
 }
 
@@ -58,7 +63,7 @@ input[type="checkbox"] {
 }
 
 button {
-  background-color: #4CAF50;
+  background-color: #c58d16af; /* Warna hijau */
   color: white;
   border: none;
   border-radius: 5px;
@@ -66,7 +71,7 @@ button {
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #45a049; /* Warna hijau gelap saat dihover */
 }
 
 .error {
@@ -76,10 +81,14 @@ button:hover {
 </head>
 <body>
 
-<div class="container">
-  <h2>Scangkir Order Menu </h2>
+<div class="container" style="display: flex; justify-content: center;">
+  <h2 style="display: flex; align-items: center;">
+    <img src="logo.jpg" alt="Logo" style="height: 15em; margin-right: 10px;">
+  </h2>
+  
 
   <form id="whatsappForm">
+    <h2>Scangkir Kopi order Menu</h2>
     <label for="nama">Nama lengkap:</label><br>
     <input type="text" id="nama" name="nama"><br>
     <span id="namaError" class="error"></span><br>
@@ -92,6 +101,8 @@ button:hover {
     <input type="number" id="jumlah3" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
     <input type="checkbox" id="pesan4" name="pesan" value="Kopi Susu Coklat, Rp 17.000" onchange="toggleQuantity('jumlah4', this)">Kopi Susu Coklat Rp 17.000
     <input type="number" id="jumlah4" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan5" name="pesan" value="Kopi Susu Vanila Rp 20.000" onchange="toggleQuantity('jumlah5', this)">Kopi Susu Vanila Rp 20.000
+    <input type="number" id="jumlah5" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
     <input type="checkbox" id="pesan5" name="pesan" value="Kopi Susu Vanila Rp 20.000" onchange="toggleQuantity('jumlah5', this)">Kopi Susu Vanila Rp 20.000
     <input type="number" id="jumlah5" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
     <button type="button" onclick="validateAndSendMessage()">Kirim Pesan</button>
@@ -109,7 +120,7 @@ function validateAndSendMessage() {
   var namaError = document.getElementById("namaError");
   
   if (nama === "") {
-    namaError.textContent = "Nama harus diisi";
+    namaError.textContent = "Nama harus di isi guys";
     return;
   } else {
     namaError.textContent = "";
@@ -133,7 +144,7 @@ function validateAndSendMessage() {
   message = message.slice(0, -1); // Menghapus koma terakhir
   message += ". \nTerima kasih.";
   
-  var url = "https://api.whatsapp.com/send?phone=6281374517354&text=" + encodeURIComponent(message);
+  var url = "https://api.whatsapp.com/send?phone=6285207597007&text=" + encodeURIComponent(message);
   
   window.open(url, '_blank');
 }
