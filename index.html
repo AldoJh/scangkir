@@ -135,24 +135,110 @@ button:hover {
     <span id="namaError" class="error"></span><br>
     <label for="pesan">Menu : </label><br>
     <div class="input-container">
-    <input type="checkbox" id="pesan1" name="pesan" value="Kopi Hitam, Rp 10.000" onchange="toggleQuantity('jumlah1', this)">Kopi Hitam Rp 10.000
+    <label>Coffee</label>
+    <input type="checkbox" id="pesan1" name="pesan" value="Espresso, Rp 10.000" onchange="toggleQuantity('jumlah1', this)">Espresso Rp 10.000
     <input type="number" id="jumlah1" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
-    <input type="checkbox" id="pesan2" name="pesan" value="Kopi Susu, Rp 12.000" onchange="toggleQuantity('jumlah2', this)">Kopi Susu Rp 12.000
+    <input type="checkbox" id="pesan2" name="pesan" value="Doppio, Rp 13.000" onchange="toggleQuantity('jumlah2', this)">Doppio Rp 12.000
     <input type="number" id="jumlah2" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
-    <input type="checkbox" id="pesan3" name="pesan" value="Kopi Coklat, Rp 15.000" onchange="toggleQuantity('jumlah3', this)">Kopi Coklat Rp 15.000
+    <input type="checkbox" id="pesan3" name="pesan" value="Hot Amerikano, Rp 13.000" onchange="toggleQuantity('jumlah3', this)">Hot Amerikano Rp 13.000
     <input type="number" id="jumlah3" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
-    <input type="checkbox" id="pesan4" name="pesan" value="Kopi Susu Coklat, Rp 17.000" onchange="toggleQuantity('jumlah4', this)">Kopi Susu Coklat Rp 17.000
+    <input type="checkbox" id="pesan4" name="pesan" value="Ice Amerikano, Rp 15.000" onchange="toggleQuantity('jumlah4', this)">Ice Amerikano Rp 15.000
     <input type="number" id="jumlah4" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
-    <input type="checkbox" id="pesan5" name="pesan" value="Kopi Susu Vanila Rp 20.000" onchange="toggleQuantity('jumlah5', this)">Kopi Susu Vanila Rp 20.000
+    <input type="checkbox" id="pesan5" name="pesan" value="Hot Long Black Rp 13.000" onchange="toggleQuantity('jumlah5', this)">Hot Long Black Rp 13.000
     <input type="number" id="jumlah5" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
-    <input type="checkbox" id="pesan5" name="pesan" value="Kopi Susu Vanila Rp 20.000" onchange="toggleQuantity('jumlah5', this)">Kopi Susu Vanila Rp 20.000
-    <input type="number" id="jumlah5" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
-    <input type="checkbox" id="pesan5" name="pesan" value="Kopi Susu Vanila Rp 20.000" onchange="toggleQuantity('jumlah5', this)">Kopi Susu Vanila Rp 20.000
-    <input type="number" id="jumlah5" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
-    <input type="checkbox" id="pesan5" name="pesan" value="Kopi Susu Vanila Rp 20.000" onchange="toggleQuantity('jumlah5', this)">Kopi Susu Vanila Rp 20.000
-    <input type="number" id="jumlah5" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
-    <input type="checkbox" id="pesan5" name="pesan" value="Kopi Susu Vanila Rp 20.000" onchange="toggleQuantity('jumlah5', this)">Kopi Susu Vanila Rp 20.000
-    <input type="number" id="jumlah5" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan6" name="pesan" value="Ice Long Black Rp 15.000" onchange="toggleQuantity('jumlah6', this)">Ice Long Black Rp 15.000
+    <input type="number" id="jumlah6" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan7" name="pesan" value="Tubruk Rp 13.000" onchange="toggleQuantity('jumlah7', this)">Tubruk Rp 13.000
+    <input type="number" id="jumlah7" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan8" name="pesan" value="vietnam Drip Rp 15.000" onchange="toggleQuantity('jumlah8', this)">vietnam Drip Rp 15.000
+    <input type="number" id="jumlah8" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <label>Non Coffee</label>
+    <input type="checkbox" id="pesan9" name="pesan" value="Hot Chocolatte Rp 13.000" onchange="toggleQuantity('jumlah9', this)">Hot Chocolatte Rp 13.000
+    <input type="number" id="jumlah9" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan10" name="pesan" value="Ice Chocolatte Rp 15.000" onchange="toggleQuantity('jumlah10', this)">Ice Chocolatte Rp 15.000
+    <input type="number" id="jumlah10" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan11" name="pesan" value="Hot Chocolatte latte Rp 13.000" onchange="toggleQuantity('jumlah11', this)">Hot Chocolatte latte Rp 13.000
+    <input type="number" id="jumlah11" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan12" name="pesan" value="Ice Chocolatte latte Rp 18.000" onchange="toggleQuantity('jumlah12', this)">Ice Chocolatte latte  Rp 18.000
+    <input type="number" id="jumlah12" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan13" name="pesan" value="Hot Matcha Latte Rp 13.000" onchange="toggleQuantity('jumlah13', this)">Hot Matcha Latte Rp 13.000
+    <input type="number" id="jumlah13" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan14" name="pesan" value="Ice Matcha Latte Rp 18.000" onchange="toggleQuantity('jumlah14', this)">Ice Matcha Latte Rp 18.000
+    <input type="number" id="jumlah14" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan15" name="pesan" value="Hot Matcha Rp 13.000" onchange="toggleQuantity('jumlah15', this)">Matcha Rp 13.000
+    <input type="number" id="jumlah15" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan16" name="pesan" value="Ice Matcha Rp 15.000" onchange="toggleQuantity('jumlah16', this)">Ice Matcha Rp 15.000
+    <input type="number" id="jumlah16" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan17" name="pesan" value="Hot Taro Rp 13.000" onchange="toggleQuantity('jumlah17', this)">Hot Taro Rp 13.000
+    <input type="number" id="jumlah17" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan18" name="pesan" value="Ice Taro Rp 15.000" onchange="toggleQuantity('jumlah18', this)">Ice Taro Rp 15.000
+    <input type="number" id="jumlah18" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan19" name="pesan" value="Hot Taro Latte Rp 13.000" onchange="toggleQuantity('jumlah19', this)">Hot Taro Latte Rp 13.000
+    <input type="number" id="jumlah19" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan20" name="pesan" value="Ice Taro Latte Rp 18.000" onchange="toggleQuantity('jumlah20', this)">Ice Taro Latte Rp 18.000
+    <input type="number" id="jumlah20" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan21" name="pesan" value="Hot GreenTea Rp 13.000" onchange="toggleQuantity('jumlah21', this)">Hot GreenTea Rp 13.000
+    <input type="number" id="jumlah21" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan22" name="pesan" value="Ice GreenTea Rp 15.000" onchange="toggleQuantity('jumlah22', this)">Ice GreenTea Rp 15.000
+    <input type="number" id="jumlah22" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan23" name="pesan" value="Hot GreenTea Latte Rp 13.000" onchange="toggleQuantity('jumlah23', this)">Hot GreenTea Latte Rp 13.000
+    <input type="number" id="jumlah23" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan24" name="pesan" value="Ice GreenTea Latte Rp 18.000" onchange="toggleQuantity('jumlah24', this)">Ice GreenTea Latte Rp 18.000
+    <input type="number" id="jumlah24" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan25" name="pesan" value="Hot Redvelvet Rp 13.000" onchange="toggleQuantity('jumlah25', this)">Hot Redvelvet Rp 13.000
+    <input type="number" id="jumlah25" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan26" name="pesan" value="Ice Redvelvet Rp 15.000" onchange="toggleQuantity('jumlah26', this)">Ice Redvelvet Rp 15.000
+    <input type="number" id="jumlah26" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan27" name="pesan" value="Hot Redvelvet Latte Rp 13.000" onchange="toggleQuantity('jumlah27', this)">Hot Redvelvet Latte Rp 13.000
+    <input type="number" id="jumlah27" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan28" name="pesan" value="Ice Redvelvet Latte Rp 18.000" onchange="toggleQuantity('jumlah28', this)">Ice Redvelvet Latte Rp 18.000
+    <input type="number" id="jumlah28" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <label>Special</label>
+    <input type="checkbox" id="pesan29" name="pesan" value="Ice GreenTea Island Rp 15.000" onchange="toggleQuantity('jumlah29', this)">Ice GreenTea Island Rp 15.000
+    <input type="number" id="jumlah29" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan30" name="pesan" value="Ice Adventure Coffee Rp 25.000" onchange="toggleQuantity('jumlah30', this)">Ice Adventure Coffee Rp 25.000
+    <input type="number" id="jumlah30" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan31" name="pesan" value="Somboy Kietna Rp 18.000" onchange="toggleQuantity('jumlah31', this)">Somboy Kietna Rp 18.000
+    <input type="number" id="jumlah31" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan32" name="pesan" value="Honey Ice Tea Rp 18.000" onchange="toggleQuantity('jumlah32', this)">Honey Ice Tea Rp 18.000
+    <input type="number" id="jumlah32" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <label>Others</label>
+    <input type="checkbox" id="pesan33" name="pesan" value="Ice Tea Rp 8.000" onchange="toggleQuantity('jumlah33', this)">Ice Tea Rp 8.000
+    <input type="number" id="jumlah33" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan34" name="pesan" value="Hot GreenTea Rp 8.000" onchange="toggleQuantity('jumlah34', this)">Hot GreenTea Rp 8.000
+    <input type="number" id="jumlah34" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan35" name="pesan" value="Ice GreenTea Rp 10.000" onchange="toggleQuantity('jumlah35', this)">Ice GreenTea Rp 10.000
+    <input type="number" id="jumlah35" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan36" name="pesan" value="Hot LemonTea Rp 10.000" onchange="toggleQuantity('jumlah36', this)">Hot LemonTea Rp 10.000
+    <input type="number" id="jumlah36" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan37" name="pesan" value="Ice LemonTea Rp 15.000" onchange="toggleQuantity('jumlah37', this)">Ice LemonTea Rp 15.000
+    <input type="number" id="jumlah37" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan38" name="pesan" value="Hot Teh Tarik Rp 10.000" onchange="toggleQuantity('jumlah38', this)">Hot Teh Tarik Rp 10.000
+    <input type="number" id="jumlah38" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan39" name="pesan" value="Ice Teh Tarik Rp 13.000" onchange="toggleQuantity('jumlah39', this)">Ice Teh Tarik Rp 13.000
+    <input type="number" id="jumlah39" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <label>white</label>
+    <input type="checkbox" id="pesan40" name="pesan" value="Hot Sanger Rp 13.000" onchange="toggleQuantity('jumlah40', this)">Hot Sanger Rp 13.000
+    <input type="number" id="jumlah40" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan41" name="pesan" value="Ice Sanger Rp 15.000" onchange="toggleQuantity('jumlah41', this)">Ice Sanger Rp 15.000
+    <input type="number" id="jumlah41" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan42" name="pesan" value="Hot Cappuccino Rp 13.000" onchange="toggleQuantity('jumlah42', this)">Hot Cappuccino Rp 13.000
+    <input type="number" id="jumlah42" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan43" name="pesan" value="Ice Cappuccino Rp 15.000" onchange="toggleQuantity('jumlah43', this)">Ice Cappuccino Rp 15.000
+    <input type="number" id="jumlah43" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan44" name="pesan" value="Hot Cappuccino Rp 15.000" onchange="toggleQuantity('jumlah44', this)">Hot Cappuccino <small>(Caramel, Vanilla, Hazelnut)</small> Rp 15.000
+    <input type="number" id="jumlah44" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan45" name="pesan" value="Ice Cappuccino Rp 15.000" onchange="toggleQuantity('jumlah45', this)">Ice Cappuccino <small>(Caramel, Vanilla, Hazelnut)</small> Rp 18.000
+    <input type="number" id="jumlah45" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <!-- ini belum di input -->
+    <input type="checkbox" id="pesan46" name="pesan" value="Hot Coffee Latte Rp 13.000" onchange="toggleQuantity('jumlah46', this)">Hot Coffee Latte Rp 13.000
+    <input type="number" id="jumlah46" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan47" name="pesan" value="Ice Coffee Latte Rp 15.000" onchange="toggleQuantity('jumlah47', this)">Ice Coffee Latte Rp 18.000
+    <input type="number" id="jumlah47" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan48" name="pesan" value="Hot Coffee Latte Rp 15.000" onchange="toggleQuantity('jumlah48', this)">Hot Coffee Latte <small>(Caramel, Vanilla, Hazelnut)</small> Rp 15.000
+    <input type="number" id="jumlah48" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
+    <input type="checkbox" id="pesan49" name="pesan" value="Ice Coffee Latte Rp 15.000" onchange="toggleQuantity('jumlah49', this)">Ice Coffee Latte <small>(Caramel, Vanilla, Hazelnut)</small> Rp 18.000
+    <input type="number" id="jumlah49" name="jumlah" value="1" min="1" max="10" style="display: none;"><br>
     </div>
     <button type="button" onclick="validateAndSendMessage()">Kirim Pesan</button>
   </form>
